@@ -306,51 +306,12 @@ font-size: 14px;
 }
 
 
-body {
-background-color: #ffffff;
-line-height: 1.5;
-}
-
-/* font */
-h1, h2, h3, h4, p, span {
-font-family: "Patrick Hand", "Comic Neue", "Noto Sans TC", cursive;
-}
-
-h1 {
-font-size: 2.5rem; /* 約 40px */
-font-weight: bold;
-}
-
-h2 {
-font-size: 1.8rem; /* 約 28px */
-font-weight: normal;
-}
-
-h3 {
-font-size: 1.4rem; /* 約 22px */
-font-weight: normal;
-}
-
-h4 {
-font-size: 1.2rem; /* 約 18–19px */
-font-weight: normal;
-}
-
-p {
-font-size: 1rem;   /* 16px，最適合閱讀 */
-margin: 0.5em 0;
-}
-
-
-
 /* header */
 .header{
 background-color: #6b4f3a;
 color: #ffffff;
 text-decoration: none;
 font-family: "Patrick Hand", "Comic Neue", "Noto Sans TC", cursive;
-
-
 font-size: 14px;
 padding: 12px 24px;
 position: relative; 
@@ -382,7 +343,6 @@ font-size: 14px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-
 .bubble-history h2 {
   text-align: center;
   margin-bottom: 40px;
@@ -396,7 +356,6 @@ font-size: 14px;
   margin-bottom: 40px;
   flex-wrap: wrap; /* 讓小螢幕換行 */
 }
-
 
 .history-image {
   width: 400px;
@@ -414,9 +373,6 @@ font-size: 14px;
   text-align: left;
 }
 
-
-
-
 /* part2 process */
 .process{
     background-color: #DDD3CB;
@@ -425,8 +381,8 @@ font-size: 14px;
     border-radius: 8px;         /* 圓角 */
     margin: 20px 120px;             /* 區塊外面間距 */
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-
 }
+
 .process-tittle {
   position: relative;
   display: flex;
@@ -445,15 +401,12 @@ font-size: 14px;
   text-align: center;
 }
 
-
-
 .process-card-group{
     display: flex;              /* 橫向排列 */
     justify-content: center;    /* 水平置中 */
     gap: 20px;                  /* 卡片間距 */
-    flex-wrap: wrap;  /* 允許自動換行 */}
-
-
+    flex-wrap: wrap;  /* 允許自動換行 */
+}
 
 .process-card {
   flex: 1 1 220px;   /* 每張卡片最小 220px，能縮也能長 */
@@ -464,7 +417,6 @@ font-size: 14px;
   box-shadow: 0 6px 20px rgba(0,0,0,.08);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-
 }
 
 .process-card:hover {
@@ -505,7 +457,6 @@ font-size: 14px;
 }
 
 /*part 3*/
-
 .new-bubble-tea{
     background-color: #DDD3CB;
     text-align: center;          /* 讓標題和內容置中 */
@@ -547,13 +498,6 @@ font-size: 14px;
   line-height: 1.6;
 }
 
-/* RWD 手機版：上下排列 */
-@media (max-width: 768px) {
-  .new-bubble-content {
-    flex-direction: column;
-  }
-}
-
 /* part 4*/
 :root {
   --skew-deg: 12deg; /* 平行四邊形傾斜度 */
@@ -590,7 +534,6 @@ font-size: 14px;
   transform-origin: center;
 }
 
-
 /* footer */
 .footer {
   background-color: #6b4f3a; /* 咖啡色 */
@@ -603,12 +546,198 @@ font-size: 14px;
   margin: 6px 0;
 }
 
-
 .copyright{
   background-color: #221304;
   color: #ffffff;
   text-align: center;
   padding: 4px 8px;
-
   display: block;   /* 預設是 block，但強制一下比較保險 */
+}
+
+/* ========================================
+   MOBILE RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet styles (768px and below) */
+@media (max-width: 768px) {
+  
+  /* Header mobile adjustments */
+  .header {
+    padding: 10px 16px;
+    gap: 16px;
+    justify-content: center; /* Center on mobile */
+    flex-wrap: wrap;
+  }
+  
+  .headerlist {
+    font-size: 13px;
+  }
+  
+  /* First image mobile */
+  .first-image {
+    height: 150px; /* Shorter on mobile */
+  }
+  
+  /* History section mobile */
+  .bubble-history {
+    padding: 20px 16px; /* Much smaller padding */
+    margin: 20px 16px;  /* Smaller margins */
+  }
+  
+  .bubble-history h2 {
+    font-size: 1.5rem; /* Smaller heading */
+    margin-bottom: 20px;
+  }
+  
+  .history {
+    flex-direction: column; /* Stack vertically */
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .history-image {
+    width: 100%; /* Full width on mobile */
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  .history-text {
+    text-align: center; /* Center text on mobile */
+    min-width: unset;
+  }
+  
+  /* Process section mobile */
+  .process {
+    padding: 20px 16px;
+    margin: 20px 16px;
+  }
+  
+  .process-card-group {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 16px;
+  }
+  
+  .process-card {
+    flex: none;
+    max-width: none;
+    width: 100%;
+  }
+  
+  /* New bubble tea section mobile */
+  .new-bubble-tea {
+    padding: 20px 16px;
+    margin: 20px 16px;
+  }
+  
+  .new-bubble-tea h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .new-bubble-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .bubble-gallery {
+    grid-template-columns: repeat(2, 1fr); /* Keep 2x2 grid but smaller */
+  }
+  
+  /* Bubble food section mobile */
+  .bubble-food {
+    padding: 12px 16px;
+    margin: 20px 16px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 4 */
+    gap: 16px;
+  }
+  
+  /* Footer mobile */
+  .footer {
+    padding: 16px 12px;
+  }
+  
+  .footer p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile styles (480px and below) */
+@media (max-width: 480px) {
+  
+  /* Header extra small mobile */
+  .header {
+    padding: 8px 12px;
+    gap: 12px;
+    font-size: 12px;
+  }
+  
+  .headerlist {
+    font-size: 12px;
+  }
+  
+  /* First image extra small mobile */
+  .first-image {
+    height: 120px;
+  }
+  
+  /* History section extra small mobile */
+  .bubble-history {
+    padding: 16px 12px;
+    margin: 16px 12px;
+  }
+  
+  .bubble-history h2 {
+    font-size: 1.3rem;
+  }
+  
+  .history-image {
+    max-width: 280px;
+  }
+  
+  /* Process section extra small mobile */
+  .process {
+    padding: 16px 12px;
+    margin: 16px 12px;
+  }
+  
+  .tea-card__img {
+    height: 150px; /* Shorter images on small screens */
+  }
+  
+  /* New bubble tea section extra small mobile */
+  .new-bubble-tea {
+    padding: 16px 12px;
+    margin: 16px 12px;
+  }
+  
+  .new-bubble-tea h2 {
+    font-size: 1.2rem;
+  }
+  
+  .bubble-gallery {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+    gap: 8px;
+  }
+  
+  /* Bubble food section extra small mobile */
+  .bubble-food {
+    padding: 8px 12px;
+    margin: 16px 12px;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 12px;
+  }
+  
+  /* Reduce skew effect on mobile for better readability */
+  :root {
+    --skew-deg: 8deg;
+  }
+  
+  /* Footer extra small mobile */
+  .footer {
+    padding: 12px 8px;
+  }
+  
+  .footer p {
+    font-size: 13px;
+  }
 }
