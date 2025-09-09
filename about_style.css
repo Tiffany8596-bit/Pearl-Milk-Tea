@@ -1,0 +1,614 @@
+body {
+background-color: #ffffff;
+line-height: 1.5;
+}
+
+/* font */
+h1, h2, h3, h4, p, span {
+font-family: "Patrick Hand", "Comic Neue", "Noto Sans TC", cursive;
+}
+
+h1 {
+font-size: 2.5rem; /* 約 40px */
+font-weight: bold;
+}
+
+h2 {
+font-size: 1.8rem; /* 約 28px */
+font-weight: normal;
+}
+
+h3 {
+font-size: 1.4rem; /* 約 22px */
+font-weight: normal;
+}
+
+h4 {
+font-size: 1.2rem; /* 約 18–19px */
+font-weight: normal;
+}
+
+p {
+font-size: 1rem;   /* 16px，最適合閱讀 */
+margin: 0.5em 0;
+}
+
+
+
+/* header */
+.header{
+background-color: #6b4f3a;
+color: #ffffff;
+text-decoration: none;
+font-family: "Patrick Hand", "Comic Neue", "Noto Sans TC", cursive;
+
+
+font-size: 14px;
+padding: 12px 24px;
+position: relative; 
+display: flex;
+justify-content: right;
+gap: 24px; 
+}
+
+.headerlist{
+text-decoration: none;
+color: #ffffff;
+font-size: 14px;
+}
+
+.first-image {
+  width: 100%;
+  height: 200px;      /* 固定高度 */
+  object-fit: cover;  /* 保持比例並裁切 */
+  display: block;     /* 避免底下有空隙 */
+}
+
+/* part1 history */
+.bubble-history{
+    background-color: #DDD3CB;
+    text-align: center;          /* 讓標題和內容置中 */
+    padding: 40px 120px;         /* 內距 */
+    border-radius: 8px;         /* 圓角 */
+    margin: 40px 120px;             /* 區塊外面間距 */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+.bubble-history h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.history {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* 讓小螢幕換行 */
+}
+
+
+.history-image {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.history-text {
+  flex: 1;
+  min-width: 250px; /* 避免文字太擠 */
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+
+
+
+/* part2 process */
+.process{
+    background-color: #DDD3CB;
+    text-align: center;          /* 讓標題和內容置中 */
+    padding: 40px 120px;         /* 內距 */
+    border-radius: 8px;         /* 圓角 */
+    margin: 20px 120px;             /* 區塊外面間距 */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+}
+.process-tittle {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* 改成直向排列 */
+  align-items: center;    /* 水平置中 */
+  justify-content: center;/* 垂直置中 */
+  text-align: center;     /* 文字本身置中 */
+  padding: 20px; 
+  margin: 0 auto;         /* 讓區塊本身在畫面置中 */
+  color: rgb(17, 17, 17);
+  
+  flex: 1;
+  min-width: 250px; /* 避免文字太擠 */
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+
+.process-card-group{
+    display: flex;              /* 橫向排列 */
+    justify-content: center;    /* 水平置中 */
+    gap: 20px;                  /* 卡片間距 */
+    flex-wrap: wrap;  /* 允許自動換行 */}
+
+
+
+.process-card {
+  flex: 1 1 220px;   /* 每張卡片最小 220px，能縮也能長 */
+  max-width: 300px;  /* 卡片不會太大 */
+
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.process-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.tea-card__img {
+  width: 100%;
+  height: 200px;      /* 統一高度 */
+  object-fit: cover;  /* 裁切 */
+}
+
+.step-card {
+  padding: 16px 18px;
+}
+
+.process-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #6b4f3a;
+}
+
+.step-divider {
+  display: block;
+  width: auto;
+  height: 1.5px;
+  background: #c6b6a8;
+  margin: 10px 0 12px;
+  justify-content: center; 
+}
+
+.step-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/*part 3*/
+
+.new-bubble-tea{
+    background-color: #DDD3CB;
+    text-align: center;          /* 讓標題和內容置中 */
+    padding: 40px 120px;         /* 內距 */
+    border-radius: 8px;         /* 圓角 */
+    margin: 40px 120px;             /* 區塊外面間距 */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.new-bubble-tea h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.new-bubble-content {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* 左右間距 */
+}
+
+.bubble-gallery {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 兩欄兩列 */
+  gap: 12px;
+}
+
+.bubble-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.bubble-text {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* RWD 手機版：上下排列 */
+@media (max-width: 768px) {
+  .new-bubble-content {
+    flex-direction: column;
+  }
+}
+
+/* part 4*/
+:root {
+  --skew-deg: 12deg; /* 平行四邊形傾斜度 */
+}
+
+.bubble-food {
+  padding: 12px 48px;
+  margin: 40px 0;  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 三張等分 */
+  gap: 24px; /* 照片間距 */
+  border-radius: 8px; 
+}
+
+.photo-card {
+  margin: 0;
+}
+
+.photo-frame {
+  position: relative;
+  transform: skewX(calc(-1 * var(--skew-deg))); /* 外框斜 */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+  overflow: hidden;
+  aspect-ratio: 5 / 4; /* 固定比例，讓排版整齊 */
+  border-radius: 8px; 
+}
+
+.photo-frame img {
+  width: 140%;
+  height: 140%;
+  object-fit: cover;  /* 填滿裁切 */
+  display: block;
+  transform: skewX(var(--skew-deg)) scale(1.06); /* 圖片反向 skew 抵銷、稍微放大避免露白 */
+  transform-origin: center;
+}
+
+
+/* footer */
+.footer {
+  background-color: #6b4f3a; /* 咖啡色 */
+  color: #fff;               /* 白字 */
+  text-align: center;
+  padding: 20px 15px;
+}
+
+.footer p {
+  margin: 6px 0;
+}
+
+
+.copyright{
+  background-color: #221304;
+  color: #ffffff;
+  text-align: center;
+  padding: 4px 8px;
+
+  display: block;   /* 預設是 block，但強制一下比較保險 */
+}
+
+
+body {
+background-color: #ffffff;
+line-height: 1.5;
+}
+
+/* font */
+h1, h2, h3, h4, p, span {
+font-family: "Patrick Hand", "Comic Neue", "Noto Sans TC", cursive;
+}
+
+h1 {
+font-size: 2.5rem; /* 約 40px */
+font-weight: bold;
+}
+
+h2 {
+font-size: 1.8rem; /* 約 28px */
+font-weight: normal;
+}
+
+h3 {
+font-size: 1.4rem; /* 約 22px */
+font-weight: normal;
+}
+
+h4 {
+font-size: 1.2rem; /* 約 18–19px */
+font-weight: normal;
+}
+
+p {
+font-size: 1rem;   /* 16px，最適合閱讀 */
+margin: 0.5em 0;
+}
+
+
+
+/* header */
+.header{
+background-color: #6b4f3a;
+color: #ffffff;
+text-decoration: none;
+font-family: "Patrick Hand", "Comic Neue", "Noto Sans TC", cursive;
+
+
+font-size: 14px;
+padding: 12px 24px;
+position: relative; 
+display: flex;
+justify-content: right;
+gap: 24px; 
+}
+
+.headerlist{
+text-decoration: none;
+color: #ffffff;
+font-size: 14px;
+}
+
+.first-image {
+  width: 100%;
+  height: 200px;      /* 固定高度 */
+  object-fit: cover;  /* 保持比例並裁切 */
+  display: block;     /* 避免底下有空隙 */
+}
+
+/* part1 history */
+.bubble-history{
+    background-color: #DDD3CB;
+    text-align: center;          /* 讓標題和內容置中 */
+    padding: 40px 120px;         /* 內距 */
+    border-radius: 8px;         /* 圓角 */
+    margin: 40px 120px;             /* 區塊外面間距 */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+.bubble-history h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.history {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* 讓小螢幕換行 */
+}
+
+
+.history-image {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.history-text {
+  flex: 1;
+  min-width: 250px; /* 避免文字太擠 */
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+
+
+
+/* part2 process */
+.process{
+    background-color: #DDD3CB;
+    text-align: center;          /* 讓標題和內容置中 */
+    padding: 40px 120px;         /* 內距 */
+    border-radius: 8px;         /* 圓角 */
+    margin: 20px 120px;             /* 區塊外面間距 */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+}
+.process-tittle {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* 改成直向排列 */
+  align-items: center;    /* 水平置中 */
+  justify-content: center;/* 垂直置中 */
+  text-align: center;     /* 文字本身置中 */
+  padding: 20px; 
+  margin: 0 auto;         /* 讓區塊本身在畫面置中 */
+  color: rgb(17, 17, 17);
+  
+  flex: 1;
+  min-width: 250px; /* 避免文字太擠 */
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+
+.process-card-group{
+    display: flex;              /* 橫向排列 */
+    justify-content: center;    /* 水平置中 */
+    gap: 20px;                  /* 卡片間距 */
+    flex-wrap: wrap;  /* 允許自動換行 */}
+
+
+
+.process-card {
+  flex: 1 1 220px;   /* 每張卡片最小 220px，能縮也能長 */
+  max-width: 300px;  /* 卡片不會太大 */
+
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.process-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.tea-card__img {
+  width: 100%;
+  height: 200px;      /* 統一高度 */
+  object-fit: cover;  /* 裁切 */
+}
+
+.step-card {
+  padding: 16px 18px;
+}
+
+.process-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #6b4f3a;
+}
+
+.step-divider {
+  display: block;
+  width: auto;
+  height: 1.5px;
+  background: #c6b6a8;
+  margin: 10px 0 12px;
+  justify-content: center; 
+}
+
+.step-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/*part 3*/
+
+.new-bubble-tea{
+    background-color: #DDD3CB;
+    text-align: center;          /* 讓標題和內容置中 */
+    padding: 40px 120px;         /* 內距 */
+    border-radius: 8px;         /* 圓角 */
+    margin: 40px 120px;             /* 區塊外面間距 */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.new-bubble-tea h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.new-bubble-content {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* 左右間距 */
+}
+
+.bubble-gallery {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 兩欄兩列 */
+  gap: 12px;
+}
+
+.bubble-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.bubble-text {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* RWD 手機版：上下排列 */
+@media (max-width: 768px) {
+  .new-bubble-content {
+    flex-direction: column;
+  }
+}
+
+/* part 4*/
+:root {
+  --skew-deg: 12deg; /* 平行四邊形傾斜度 */
+}
+
+.bubble-food {
+  padding: 12px 48px;
+  margin: 40px 0;  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 三張等分 */
+  gap: 24px; /* 照片間距 */
+  border-radius: 8px; 
+}
+
+.photo-card {
+  margin: 0;
+}
+
+.photo-frame {
+  position: relative;
+  transform: skewX(calc(-1 * var(--skew-deg))); /* 外框斜 */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+  overflow: hidden;
+  aspect-ratio: 5 / 4; /* 固定比例，讓排版整齊 */
+  border-radius: 8px; 
+}
+
+.photo-frame img {
+  width: 140%;
+  height: 140%;
+  object-fit: cover;  /* 填滿裁切 */
+  display: block;
+  transform: skewX(var(--skew-deg)) scale(1.06); /* 圖片反向 skew 抵銷、稍微放大避免露白 */
+  transform-origin: center;
+}
+
+
+/* footer */
+.footer {
+  background-color: #6b4f3a; /* 咖啡色 */
+  color: #fff;               /* 白字 */
+  text-align: center;
+  padding: 20px 15px;
+}
+
+.footer p {
+  margin: 6px 0;
+}
+
+
+.copyright{
+  background-color: #221304;
+  color: #ffffff;
+  text-align: center;
+  padding: 4px 8px;
+
+  display: block;   /* 預設是 block，但強制一下比較保險 */
+}
